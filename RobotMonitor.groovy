@@ -68,7 +68,6 @@ def RobotCleaningFinished() {
 	// Change mode to Robot InActive Mode
 
 	log.debug "changeMode, location.mode = $location.mode, finishedMode = $finishedMode, location.modes = $location.modes"
-	
 
 	if (location.mode != finishedMode) {
 		if (location.modes?.find{it.name == finishedMode}) {
