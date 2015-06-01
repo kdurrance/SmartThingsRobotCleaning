@@ -61,7 +61,7 @@ def RobotCleaningHandler(evt) {
 	}
     
     // execute handler at the defined time
-    runIn(findFalseAlarmThreshold() * 60, RobotCleaningFinished)
+    runIn(findInactivityThreshold() * 60, RobotCleaningFinished)
 }
 
 def RobotCleaningFinished() {
