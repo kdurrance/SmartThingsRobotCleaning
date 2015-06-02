@@ -1,4 +1,5 @@
 /**
+ *
  *  Robot Vacuum Monitor
  *
  *  Place a SmartThings Multi Sensor inside your robot vacuum cleaner to track movement.
@@ -7,6 +8,8 @@
  *
  *
  *  Author: Karl Durrance
+ *  Git repo: https://github.com/kdurrance/SmartThingsRobotCleaning
+ *
  */
 definition(
     name: "Robot Vacuum Monitor",
