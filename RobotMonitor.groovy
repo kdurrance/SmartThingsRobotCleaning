@@ -14,8 +14,8 @@ definition(
     author: "Karl Durrance",
     description: "Changes mode based on accelerometer sensor on SmartThings Multi Sensor",
     category: "Mode Magic",
-    iconUrl: "https://s3.amazonaws.com/smartapp-icons/Meta/text_accelerometer.png",
-    iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Meta/text_accelerometer@2x.png"
+    iconUrl: "https://s3.amazonaws.com/smartapp-icons/Partner/doorbot.png",
+    iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Partner/doorbot@2x.png"
 )
 
 preferences {
