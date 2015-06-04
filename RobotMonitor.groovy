@@ -56,6 +56,7 @@ def RobotCleaningHandler(evt) {
 	if (location.mode != runningMode) {
 		if (location.modes?.find{it.name == runningMode}) {
 			setLocationMode(runningMode)
+            		sendNotificationEvent("Robot has begun cleaning. I changed mode to '${runningMode}' as you requested.")
 			send "${label} has changed the mode to '${runningMode}'"
 		}
 		else {
@@ -71,10 +72,11 @@ def RobotCleaningFinished() {
 	// Change mode to Robot InActive Mode
 
 	log.debug "changeMode, location.mode = $location.mode, finishedMode = $finishedMode, location.modes = $location.modes"
-
+	
 	if (location.mode != finishedMode) {
 		if (location.modes?.find{it.name == finishedMode}) {
 			setLocationMode(finishedMode)
+            		sendNotificationEvent("Robot has finished cleaning. I changed mode to '${finishedMode}' as you requested.")
 			send "${label} has changed the mode to '${finishedMode}'"
 		}
 		else {
