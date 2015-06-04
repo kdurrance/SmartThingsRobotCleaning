@@ -4,7 +4,7 @@
  *
  *  Place a SmartThings Multi Sensor inside your robot vacuum cleaner to track movement.
  *  Create a new Mode called "Robot Cleaning" or similar, and disable motion sensors in this Mode
- *  Once robot is inactive for the defined period the Mode switches back to the desire Mode
+ *  Once robot is inactive for the defined period the Mode switches back to the desired Mode
  *
  *
  *  Author: Karl Durrance
