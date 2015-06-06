@@ -33,10 +33,6 @@ preferences {
 	section("Change to this mode when Robot is finished") {
 		input "finishedMode", "mode", title: "Change to Mode when finished?"
 	}
-    
-    section("Reset to finished Mode when Robot is inactive (defaults to 20 min)") {
-        input "inactivityThreshold", "decimal", title: "After this many minutes of inactivity?", required: false
-    }
 }
 
 def installed() {
@@ -64,8 +60,8 @@ def RobotCleaningHandler(evt) {
 		}
 	}
     
-    // execute handler at the defined time
-    runIn(findInactivityThreshold() * 60, RobotCleaningFinished)
+    // execute finished handler a couple of minutes after inactivity
+    runIn(2 * 60, RobotCleaningFinished)
 }
 
 def RobotCleaningFinished() {
@@ -83,9 +79,4 @@ def RobotCleaningFinished() {
 			log.warn "${label} tried to change to undefined mode '${finishedMode}'"
 		}
 	}
-}
-
-private findInactivityThreshold() {
-    // return our default value of 20 if the value is not set in preferences
-    (inactivityThreshold != null && inactivityThreshold != "") ? inactivityThreshold : 20
 }
