@@ -47,7 +47,7 @@ def updated() {
 def RobotCleaningHandler(evt) {
 	// Change mode to Robot Active Mode
 
-	log.debug "changeMode, location.mode = $location.mode, runningMode = $runningMode, location.modes = $location.modes"
+	log.debug "RobotCleaningHandler, location.mode = $location.mode, runningMode = $runningMode, location.modes = $location.modes"
 	
 	if (location.mode != runningMode) {
 		if (location.modes?.find{it.name == runningMode}) {
@@ -67,7 +67,7 @@ def RobotCleaningHandler(evt) {
 def RobotCleaningFinished() {
 	// Change mode to Robot InActive Mode
 
-	log.debug "changeMode, location.mode = $location.mode, finishedMode = $finishedMode, location.modes = $location.modes"
+	log.debug "RobotCleaningFinished, location.mode = $location.mode, finishedMode = $finishedMode, location.modes = $location.modes"
 	
 	if (location.mode != finishedMode) {
 		if (location.modes?.find{it.name == finishedMode}) {
