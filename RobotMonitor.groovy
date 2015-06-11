@@ -53,10 +53,10 @@ def RobotCleaningHandler(evt) {
 		if (location.modes?.find{it.name == runningMode}) {
 			setLocationMode(runningMode)
             		sendNotificationEvent("Robot has begun cleaning. I changed mode to '${runningMode}' as you requested.")
-			log.debug "${label} has changed the mode to '${runningMode}'"
+			log.debug "Robot Vacuum Monitor has changed the mode to '${runningMode}'"
 		}
 		else {
-			log.warn "${label} tried to change to undefined mode '${runningMode}'"
+			log.warn "Robot Vacuum Monitor tried to change to undefined mode '${runningMode}'"
 		}
 	}
     
@@ -73,10 +73,10 @@ def RobotCleaningFinished() {
 		if (location.modes?.find{it.name == finishedMode}) {
 			setLocationMode(finishedMode)
             		sendNotificationEvent("Robot has finished cleaning. I changed mode to '${finishedMode}' as you requested.")
-			log.debug "${label} has changed the mode to '${finishedMode}'"
+			log.debug "Robot Vacuum Monitor has changed the mode to '${finishedMode}'"
 		}
 		else {
-			log.warn "${label} tried to change to undefined mode '${finishedMode}'"
+			log.warn "Robot Vacuum Monitor tried to change to undefined mode '${finishedMode}'"
 		}
 	}
 }
